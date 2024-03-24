@@ -1,0 +1,10 @@
+{{ define "main" }}
+	<main>
+    <h1> Articles </h1>
+    <ul>
+      {{range .Site.RegularPages}}
+      <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+      {{end}}
+    </ul>
+	</main>
+{{ end }}
