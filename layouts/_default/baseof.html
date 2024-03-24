@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/bulma.min.css" | relURL }}">
 </head>
 <body>
-  {{ partial "nav" . }}
-  {{ block "main" . }}{{ end }}
+  <div class="main container" id="main">
+    <nav class="panel">
+      <p class="panel-heading" style="text-align: center;"> <a class="is-active" href="/">walvisk.dev</a></p>
+      <p class="panel-tabs">
+        <a class="is-active" href="/">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/project">Project</a>
+        <a href="/current">Current</a>
+      </p>
+      <div class="container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </nav>
+  </div>
 </body>
 </html>
