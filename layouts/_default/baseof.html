@@ -6,6 +6,7 @@
   <title>{{ .Title }}</title>
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/bulma.min.css" | relURL }}">
+  <link rel="icon" href="{{ "favicon/favicon.ico" | relURL }}">
 </head>
 <body>
   <div class="main container" id="main">
@@ -14,8 +15,7 @@
       <p class="panel-tabs">
         <a href="/">About</a>
         <a href="/blog">Blog</a>
-        <a href="/project">Project</a>
-        <a href="/current">Current</a>
+        <a href="/now">Now</a>
       </p>
       <div class="container">
         {{ block "main" . }}{{ end }}
